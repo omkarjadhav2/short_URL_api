@@ -1,0 +1,31 @@
+{
+  "name": "shorturlservice",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/omkarjadhav2/short_URL_api#readme",
+  "bugs": {
+    "url": "https://github.com/omkarjadhav2/short_URL_api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omkarjadhav2/short_URL_api.git"
+  },
+  "license": "ISC",
+  "author": "omkar jadhav",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "nanoid": "^5.1.0",
+    "nodemon": "^3.1.9",
+    "shortid": "^2.2.17",
+    "uuid": "^11.0.5"
+  }
+}
