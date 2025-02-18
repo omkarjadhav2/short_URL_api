@@ -1,8 +1,8 @@
 const jwt = require("jsonwebtoken");
-const secretKey = "Omkar@10";  // Fixed typo in "sercretkey"
+const secretKey = "Omkar@10"; 
 
 function setUser(user) {
-    return jwt.sign({ _id : user._id , email : user.email}, secretKey);  // Add expiry time for security
+    return jwt.sign({ _id : user._id , email : user.email}, secretKey); 
 }
 
 function getUser(token) {
