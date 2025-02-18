@@ -26,6 +26,7 @@ app.set("views" , path.resolve("./views"))
 app.use(express.json());
 app.use(express.urlencoded({extended : false}))
 app.use(cookieparser())
+app.use(express.static(path.resolve("./public")))
 
 app.use("/url", restictToLoggedInUserOnly , urlRoute);
 app.use("/" , checkAuth, staticRoute);
