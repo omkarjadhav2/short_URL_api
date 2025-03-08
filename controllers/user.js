@@ -9,6 +9,15 @@ async function HandleUserSignUp(req , res) {
         email,
         password,
     });
+    
+    const user = await User.findOne({email , password});
+    if(!user)
+       return res.render("login" , { error : "Invalid Username or Password",
+
+       });
+
+    const token = setUser(user)
+    res.cookie('uid' , token);   
     return res.redirect("/");
 }
 
@@ -29,4 +38,5 @@ async function HandleUserLogin(req , res) {
 module.exports = {
     HandleUserSignUp,
     HandleUserLogin,
+    
 }

@@ -6,18 +6,17 @@ const path = require("path");
 const staticRoute = require("./routes/staticRouter");
 const userRoute = require("./routes/user")
 const cookieparser = require("cookie-parser");
-const { restictToLoggedInUserOnly , checkAuth } = require("./middlewares/auth"); 
+const { restictToLoggedInUserOnly , checkAuth } = require("./middlewares/auth");
+require("dotenv").config();
 
 
 
 const app = express();
 
 
-const PORT = 8001;
+const PORT = process.env.PORT || 8001;
 
-connectToMongodb("mongodb://127.0.0.1:27017/short-url")
-.then(()=> console.log("mongodb connected succesfully")
-)
+connectToMongodb();
 
 app.set("view engine" , "ejs");
 

@@ -14,6 +14,12 @@
     <label for="">Password</label>
     <input type="text" required name="password">
     <button type="submit">Login</button>
+    <div class="signup_text"> <a href="/signup">For Sign Up, Click Here</a></div>
+    <% if (locals.error) { %>
+        <p><%= error %>, Please try again </p>
+    <% } else { %>
+       <div></div>
+    <% } %>
    </form>
 </body>
 </html>

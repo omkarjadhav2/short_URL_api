@@ -48,3 +48,9 @@ body {
     background-color: #0056b3;
   }
   
+  .login_text{
+    margin: 10px;
+    text-decoration: underline;
+    color: #007bff;
+    padding-top: 10px;
+  }
